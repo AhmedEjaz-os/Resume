@@ -1,0 +1,479 @@
+/* FONT IMPORTS */
+@font-face {
+    font-family: "Yellowtail";
+    src: local("Yellowtail"),
+     url("../../fonts/Yellowtail/Yellowtail-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "digital7";
+    src: local("digital7"),
+     url("../../fonts/digital/digital-7.ttf") format("truetype");
+}
+
+/* Animations */
+/* @keyframes htmlLogoAnimation {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(0px, 60px);
+    }
+    50% {
+        transform: translate(0px, 0px);
+    }
+    75% {
+        transform: translate(0px, 60px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+} */
+@keyframes cursorBlinks {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes moveInBullets{
+    from{
+        transform: translateX(-150px);
+    }
+    to{
+        transform: translate(0px);
+    }
+}
+
+/* Section =======> 1 */
+.SectionOneIntroduction{
+    position: relative;
+    width: 100%;
+    height: 88vh;
+    background-image: url('../../../../public/images/coverPhoto.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 99;
+}
+
+.SectionOneIntroduction::before{
+    content: '';
+    position: absolute;
+    z-index: 10000;
+    background-image: linear-gradient(to right, #000 , #1A1A1A);
+    opacity: 0.6;
+    width: 100%;
+    height: 88vh;
+
+}
+
+.SectionTwoDescription:has(.text-complete) .cursor{
+    display: none;
+}
+
+.IntoPart{
+    position: relative;
+    z-index: 99999;
+}
+
+.IntoPart h2{
+    font-family: 'Yellowtail', sans-serif;
+    padding: 5px 15px;
+    border: 1px solid #BD3B22;
+    color: #BD3B22;
+    background-color: white;
+    width: fit-content;
+}
+
+.SkillsPart{
+    position: relative;
+    z-index: 99999;
+    height: 88vh;
+}
+
+.SkillsPart img{
+    width: 150px;
+    object-fit: contain;
+}
+
+.getInTouchBtn{
+    padding: 5px 15px;
+    border: 1px solid #BD3B22;
+    color: #BD3B22 !important;
+    background-color: transparent;
+    transition: .6s all ease-in;
+    font-weight: bold;
+}
+
+.getInTouchBtn:hover{
+    background-color: #BD3B22;
+    border-color: white;
+    color: white !important;
+    border-radius: 10px;
+}
+
+.SkillsPart > div{
+    transition: 2s all ease-in-out;
+    display: flex;
+    width: fit-content;
+}
+
+.SkillsPart img{
+    transition: 2s all ease-in-out;
+}
+
+.oval{
+    position: absolute;
+    bottom: -15%;
+    left: 22%;
+    width: 90px;
+    height: 30px;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: 2s all ease-in-out;
+}
+
+.ovalHtml{
+    background-color: #E44D26;
+    transform: translate(0px, 58px);
+}
+
+.ovalCss{
+    background-color: #007FFF;
+    transform: translate(0px, 50px);
+}
+
+.ovalMaterial{
+    background-color: #35A8DB;
+    transform: translate(0px, 50px);
+}
+
+.ovalReact{
+    background-color: #00CCFF;
+    transform: translate(0px, 58px);
+}
+
+.htmlDiv > img{}
+
+.cssDiv > img{}
+
+.materialDiv > img{}
+
+.reactDiv  > img{}
+
+.htmlDiv{
+    position: absolute;
+    top: 15%;
+    left: 0;
+    transition: .6s all ease-in-out;
+}
+
+.htmlDiv:hover{
+    cursor: pointer;
+}
+
+.cssDiv:hover{
+    cursor: pointer;
+}
+
+.materialDiv:hover{
+    cursor: pointer;
+}
+
+.reactDiv:hover{
+    cursor: pointer;
+}
+
+.cssDiv:hover .logoImage{
+    transform: translate(0px, 60px);
+}
+
+.materialDiv:hover .logoImage{
+    transform: translate(0px, 60px);
+}
+
+.reactDiv:hover .logoImage{
+    transform: translate(0px, 60px);
+}
+
+.htmlDiv:hover .logoImage{
+    transform: translate(0px, 60px);
+}
+
+.htmlDiv:hover .oval{
+    width: 160px;
+    opacity: 1;
+    left: 0;
+    box-shadow: 0px 0px 10px 10px #E44D26;
+}
+
+.cssDiv:hover .oval{
+    width: 160px;
+    opacity: 1;
+    left: 0;
+    box-shadow: 0px 0px 10px 10px #007FFF;
+}
+
+.materialDiv:hover .oval{
+    width: 160px;
+    opacity: 1;
+    left: 0;
+    box-shadow: 0px 0px 10px 10px #35A8DB;
+}
+
+.reactDiv:hover .oval{
+    width: 160px;
+    opacity: 1;
+    left: 0;
+    box-shadow: 0px 0px 10px 10px #00CCFF;
+}
+
+.cssDiv{
+    position: absolute;
+    top: 4%;
+    left: 66%;
+}
+
+.materialDiv{
+    position: absolute;
+    top: 35%;
+    left: 34%;
+}
+
+.reactDiv{
+    position: absolute;
+    top: 53%;
+    left: 66%;
+}
+
+@media (min-width: 992px){
+    .SectionTwoAbout, .SectionThreeExperience{
+        height: 100vh !important;
+    }
+    .SectionTwoDescription{
+        margin-left: 86px;
+    }
+    .moveInView{
+        transform: translateX(60px);
+    }
+    .cards-experence, .cards-contact{
+        margin-left: 90px;
+    }
+
+
+}
+
+@media (min-width: 768px){
+    .SectionTwoAbout, .SectionThreeExperience{
+        height: 600px !important;
+    }
+}
+
+/* Section =======> 2 */
+.SectionTwoAbout, .SectionThreeExperience, .SectionFourContact{
+    width: 100%;
+    height: 900px;
+    position: relative;
+    z-index: 99;
+}
+
+.SectionThreeExperience, .SectionFourContact{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    height: 100%;
+}
+
+.SectionTwoAbout{
+    padding-top: 80px;
+    background-image: linear-gradient(to bottom, #000 , #1A1A1A);
+}
+
+.SectionThreeExperience{
+    padding-top: 0px;
+    background-image: linear-gradient(to top, #1A1A1A , #1A1A1A);
+}
+
+.SectionFourContact{
+    background-image: linear-gradient(to top, #000 , #1A1A1A);
+}
+
+.SectionTwoHeading{
+    color: white;
+    border-bottom: 1px solid #BD3B22;
+    padding: 20px 0px 5px 0px;
+    margin-left: 30px;
+    position: relative;
+    z-index: 99999;
+    width: fit-content;
+    transition: .6s all ease-in;
+    transform: translateX(-250px);
+}
+
+.moveInView{
+    transform: translateX(-2px);
+}
+
+.SectionTwoDescription{
+    color: white;
+    padding: 20px 0px 5px 0px;
+    z-index: 99999;
+    position: relative;
+    font-family: 'digital7', sans-serif;
+    font-weight: 400;
+    margin-left: 30px;
+}
+
+.cursor{
+    background-color: #fff;
+    width: 15px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+    left: -20px;
+    z-index: 99999;
+    animation-name: cursorBlinks;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.SectionTwoDescription-text{
+    transition: .6s all ease-in;
+    z-index: 99999;
+}
+
+.SectionTwoDescription-bullets{
+    position: absolute;
+    z-index: 99999;
+    transform: translateX(-450px);
+    
+}
+
+.SectionTwoDescription-bullets-1{
+    transition: 1.2s all ease-in;
+    transform: translateX(0px);
+}
+.SectionTwoDescription-bullets-2{
+    transition: 1.6s all ease-in;
+    transform: translateX(0px);
+}
+.SectionTwoDescription-bullets-3{
+    transition: 2.0s all ease-in;
+    transform: translateX(0px);
+}
+.SectionTwoDescription-bullets-4{
+    transition: 2.4s all ease-in;
+    transform: translateX(0px);
+}
+.SectionTwoDescription-bullets-5{
+    transition: 2.8s all ease-in;
+    transform: translateX(0px);
+}
+.SectionTwoDescription-bullets-6{
+    transition: 3.2s all ease-in;
+    transform: translateX(0px);
+}
+
+/* Section =============> 3 */
+
+.cards-experence, .cards-contact{
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px #000;
+    width: 100%;
+    margin-left: 30px;
+    height: auto;
+    margin-top: 50px;
+    overflow: hidden;
+    transition: .6s all ease-in;
+    position: relative;
+    transform: translateY(600px);
+}
+
+.moveTheCard{
+    transform: translateY(0px);
+}
+
+.cards-experence::before{
+    content: 'Tap to view Details';
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #000 ,#1a1a1a);
+    transform: translateY(300px);
+    transition: .6s all ease-in;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    opacity: 0.95;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cards-experence:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px #fff;
+    position: relative;
+    z-index: 9999;
+}
+
+
+
+.cards-experence:hover::before{
+    transform: translateY(0px);
+}
+
+.cards-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #BD3B22;
+    padding: 30px;
+    box-shadow: 0px 0px 30px #1a1a1a;
+}
+
+.cards-contact:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 30px #BD3B22;
+    transform: translateY(-10px);
+}
+
+.cards-experence-img{
+    width: 100%;
+    object-fit: fill;
+    height: auto;
+    position: relative;
+    transition: 1s all ease-in-out;
+}
+
+.cards-contact-icon{
+    font-size: 80px !important;
+    color: white;
+    margin-bottom: 50px;
+}
+
+
+.cards-contact-heading{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.cards-contact-subheading{
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.75;
+    /* margin-bottom: 50px; */
+
+}
+
+.links{
+    width: 100%;
+    text-decoration: none;
+}

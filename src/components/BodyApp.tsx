@@ -21,7 +21,8 @@ function BodyApp() {
   const experience = [
     {
       imgUrl: '/images/Experience.png',
-      heading: 'ParsLabs'
+      heading: 'ParsLabs',
+      link: 'www.parslabs.org'
     },
   ]
 
@@ -118,19 +119,19 @@ function BodyApp() {
         </div>
         <div className='SkillsPart d-none d-lg-block w-50'>
           <div className='htmlDiv'>
-            <img src={"/images/htmlLogo.png"} alt="htmlLogoIcon" className='htmlLogoImage logoImage' />
+            <img src={process.env.PUBLIC_URL + "/images/htmlLogo.png"} alt="htmlLogoIcon" className='htmlLogoImage logoImage' />
             <span className='oval ovalHtml'></span>
           </div>
           <div className='cssDiv'>
-            <img src={"/images/cssLogo.png"} alt="CSSLogoIcon" className='cssLogoImage logoImage' />
+            <img src={process.env.PUBLIC_URL + "/images/cssLogo.png"} alt="CSSLogoIcon" className='cssLogoImage logoImage' />
             <span className='oval ovalCss'></span>
           </div>
           <div className='materialDiv'>
-            <img src={"/images/materialLogo.png"} alt="MaterialUILogoIcon" className='materialLogoImage logoImage' />
+            <img src={process.env.PUBLIC_URL + "/images/materialLogo.png"} alt="MaterialUILogoIcon" className='materialLogoImage logoImage' />
             <span className='oval ovalMaterial'></span>
           </div>
           <div className='reactDiv'>
-            <img src={"/images/reactLogo.png"} alt="ReactLogoIcon" className='reactLogoImage logoImage' />
+            <img src={process.env.PUBLIC_URL + "/images/reactLogo.png"} alt="ReactLogoIcon" className='reactLogoImage logoImage' />
             <span className='oval ovalReact'></span>
           </div>
         </div>
@@ -172,11 +173,11 @@ function BodyApp() {
         <h1 className={scrollIsOkAtExp ? 'SectionTwoHeading moveInView' : 'SectionTwoHeading'}>Experience</h1>
         <div className='d-flex flex-row flex-wrap col-12'>
         {
-          experience.map(({imgUrl, heading}, index) => (
-          <div className={scrollIsOkAtExp ? "cards-experence col-lg-4 col-md-6 col-sm-8 col-10 moveTheCard" : "cards-experence col-md-4 col-1"} key={index}>
-            <img src={imgUrl} alt="" className='cards-experence-img' />
-            <h4 className='cards-experence-heading text-white pt-1 pb-1 d-flex justify-content-center align-items-center mb-0'>{heading}</h4>
-          </div>
+          experience.map(({imgUrl, heading, link}, index) => (
+          <a className={scrollIsOkAtExp ? "cards-experence col-lg-4 col-md-6 col-sm-8 col-10 moveTheCard" : "cards-experence col-md-4 col-1"} key={index} href={link}>
+            <img src={process.env.PUBLIC_URL + imgUrl} alt="" className='cards-experence-img' />
+            <h4 className='cards-experence-heading text-white pt-1 pb-1 d-flex justify-content-center align-items-center mb-0 text-decoration-none'>{heading}</h4>
+          </a>
           ))
         }
         </div>

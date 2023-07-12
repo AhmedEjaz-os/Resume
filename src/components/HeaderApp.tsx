@@ -108,7 +108,7 @@ function HeaderApp() {
             variant="h5"
             noWrap
             component="a"
-            href=""
+            href="/"
           >
             <div className='namePart d-block d-lg-none'>
               Muhammad Ahmed Ejaz

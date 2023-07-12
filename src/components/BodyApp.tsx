@@ -20,7 +20,7 @@ function BodyApp() {
 
   const experience = [
     {
-      imgUrl: './images/Experience-card-image.png',
+      imgUrl: '/images/Experience.png',
       heading: 'ParsLabs'
     },
   ]
@@ -118,19 +118,19 @@ function BodyApp() {
         </div>
         <div className='SkillsPart d-none d-lg-block w-50'>
           <div className='htmlDiv'>
-            <img src={"./images/htmlLogo.png"} alt="" className='htmlLogoImage logoImage' />
+            <img src={"/images/htmlLogo.png"} alt="htmlLogoIcon" className='htmlLogoImage logoImage' />
             <span className='oval ovalHtml'></span>
           </div>
           <div className='cssDiv'>
-            <img src={"./images/cssLogo.png"} alt="" className='cssLogoImage logoImage' />
+            <img src={"/images/cssLogo.png"} alt="CSSLogoIcon" className='cssLogoImage logoImage' />
             <span className='oval ovalCss'></span>
           </div>
           <div className='materialDiv'>
-            <img src={"./images/materialLogo.png"} alt="" className='materialLogoImage logoImage' />
+            <img src={"/images/materialLogo.png"} alt="MaterialUILogoIcon" className='materialLogoImage logoImage' />
             <span className='oval ovalMaterial'></span>
           </div>
           <div className='reactDiv'>
-            <img src={"./images/reactLogo.png"} alt="" className='reactLogoImage logoImage' />
+            <img src={"/images/reactLogo.png"} alt="ReactLogoIcon" className='reactLogoImage logoImage' />
             <span className='oval ovalReact'></span>
           </div>
         </div>

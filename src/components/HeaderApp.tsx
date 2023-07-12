@@ -42,7 +42,7 @@ function HeaderApp() {
             variant="h6"
             noWrap
             component="a"
-            href="/resume"
+            href="/portfolio"
             sx={{}}
           >
             <div className='namePart d-none d-lg-block'>
@@ -108,7 +108,7 @@ function HeaderApp() {
             variant="h5"
             noWrap
             component="a"
-            href="/resume"
+            href="/portfolio"
           >
             <div className='namePart d-block d-lg-none'>
               Muhammad Ahmed Ejaz

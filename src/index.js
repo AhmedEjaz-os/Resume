@@ -11,8 +11,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />}></Route>
-      <Route path="*" element={<Navigate to="/" replace={true} />}></Route>
+      <Route path="/resume" element={<App />}></Route>
+      <Route path="*" element={<Navigate to="/resume" replace={true} />}></Route>
     </Routes>
     <React.StrictMode>
       {/* <RouterProvider router={router} /> */}

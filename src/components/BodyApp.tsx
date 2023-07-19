@@ -24,6 +24,11 @@ function BodyApp() {
       heading: 'ParsLabs',
       link: 'www.parslabs.org'
     },
+    {
+      imgUrl: '/images/Experience2.jpg',
+      heading: 'Worked With Techtonex',
+      link: 'techtonex.com/our-work',
+    }
   ]
 
   const contactCardInfo = [
@@ -174,10 +179,10 @@ function BodyApp() {
         <div className='d-flex flex-row flex-wrap col-12'>
         {
           experience.map(({imgUrl, heading, link}, index) => (
-          <a className={scrollIsOkAtExp ? "cards-experence col-lg-4 col-md-6 col-sm-8 col-10 moveTheCard" : "cards-experence col-md-4 col-1"} key={index} href={link}>
+          <NavLink className={scrollIsOkAtExp ? "cards-experence col-lg-4 col-md-6 col-sm-8 col-10 moveTheCard" : "cards-experence col-md-4 col-1"} key={index} to={'https://'+link+'/'}>
             <img src={process.env.PUBLIC_URL + imgUrl} alt="" className='cards-experence-img' />
-            <h4 className='cards-experence-heading text-white pt-1 pb-1 d-flex justify-content-center align-items-center mb-0 text-decoration-none'>{heading}</h4>
-          </a>
+            <h4 className='cards-experence-heading text-white pt-1 pb-2 d-flex justify-content-center align-items-center mb-0 text-decoration-none'>{heading}</h4>
+          </NavLink>
           ))
         }
         </div>

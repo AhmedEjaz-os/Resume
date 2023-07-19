@@ -10,9 +10,10 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <Routes>
-      <Route path="*" element={<Navigate to="/portfolio" replace={true} />}></Route>
-    </Routes>
+      <Routes>
+        <Route path="/portfolio" element={<App />} exact ></Route>
+        <Route path="*" element={<Navigate to="/portfolio" replace={true}  />} exact></Route>
+      </Routes>
     <React.StrictMode>
       {/* <RouterProvider router={router} /> */}
     </React.StrictMode>

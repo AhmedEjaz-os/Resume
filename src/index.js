@@ -11,8 +11,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
       <Routes>
-        <Route path="https://ahmedejaz-os.github.io/portfolio" element={<App />} exact ></Route>
-        <Route path="*" element={<Navigate to="https://ahmedejaz-os.github.io/portfolio" replace={true}  />} exact></Route>
+        <Route path="portfolio" element={<App />} exact ></Route>
+        <Route path="*" element={<Navigate to="portfolio" replace={true}  />} exact></Route>
       </Routes>
     <React.StrictMode>
       {/* <RouterProvider router={router} /> */}
